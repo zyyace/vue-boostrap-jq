@@ -2,7 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/home'
 
-import FormDataTable from '@/test/formDataTable'
+import Table from '@/test/table/table'
+import FormDataTable from '@/test/table/formDataTable'
+
 import EventBusTest from '@/test/eventBusTest'
 
 Vue.use(Router)
@@ -15,9 +17,16 @@ export default new Router({
       component: Home,
       children: [
         {
-          path: 'formDataTable',
-          name: 'tableTest',
-          component: FormDataTable
+          path: 'table',
+          name: 'table',
+          component: Table,
+          children: [
+            {
+              path: 'formDataTable',
+              name: 'tableTest',
+              component: FormDataTable
+            }
+          ]
         },
         {
           path: 'eventBusTest',
