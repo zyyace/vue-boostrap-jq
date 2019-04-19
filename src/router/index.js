@@ -5,6 +5,7 @@ import Home from '@/components/home'
 import Table from '@/test/table/table'
 import FormDataTable from '@/test/table/formDataTable'
 import ModalTable from '@/test/table/modalTable'
+import SubTable from '@/test/table/subTable'
 
 import EventBusTest from '@/test/eventBusTest'
 
@@ -31,6 +32,11 @@ export default new Router({
               path: 'modalTable',
               name: 'modalTable',
               component: ModalTable
+            },
+            {
+              path: 'subTable',
+              name: 'subTable',
+              component: SubTable
             }
           ]
         },
