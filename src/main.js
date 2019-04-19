@@ -6,7 +6,8 @@ import router from './router'
 import 'bootstrap'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.min.js'
+// modal一闪而过的问题 暂时把这个先注释
+// import 'bootstrap/dist/js/bootstrap.min.js'
 
 import 'bootstrap-table/dist/bootstrap-table.min.js'
 import 'bootstrap-table/dist/bootstrap-table.min.css'
