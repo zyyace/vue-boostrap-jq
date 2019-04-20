@@ -9,7 +9,7 @@ import SubTable from '@/test/table/subTable'
 
 import EventBusTest from '@/test/eventBusTest'
 
-import TinyTest from '@/test/tinyTest'
+import TinyTest from '@/test/tinymce/tinyTest1'
 
 Vue.use(Router)
 
