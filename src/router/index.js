@@ -9,6 +9,8 @@ import SubTable from '@/test/table/subTable'
 
 import EventBusTest from '@/test/eventBusTest'
 
+import TinyTest from '@/test/tinyTest'
+
 Vue.use(Router)
 
 export default new Router({
@@ -44,6 +46,11 @@ export default new Router({
           path: 'eventBusTest',
           name: 'eventBusTest',
           component: EventBusTest
+        },
+        {
+          path: 'tinyTest',
+          name: 'tinyTest',
+          component: TinyTest
         }
       ]
     }
