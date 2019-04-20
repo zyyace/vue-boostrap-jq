@@ -1,9 +1,12 @@
 <template>
   <div>
     {{ msg }}
+    <div>
+    </div>
     <tinymce-editor v-model="msg"
       :disabled="disabled"
       @onClick="onClick"
+      @test="test"
       ref="editor"></tinymce-editor>
     <button @click="clear">清空内容</button>
     <button @click="disabled = true">禁用</button>
@@ -22,7 +25,11 @@ export default {
       disabled: false
     }
   },
+  mounted () {
+  },
   methods: {
+    test (name) {
+    },
     // 鼠标单击的事件
     onClick (e, editor) {
       console.log('Element clicked')

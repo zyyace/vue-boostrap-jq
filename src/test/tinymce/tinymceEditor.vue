@@ -3,6 +3,7 @@
     <editor v-model="myValue"
       :init="init"
       :disabled="disabled"
+      @test="test"
       @onClick="onClick">
     </editor>
   </div>
@@ -58,6 +59,12 @@ export default {
         // 此处为图片上传处理函数，这个直接用了base64的图片形式上传图片，
         // 如需ajax上传可参考https://www.tiny.cloud/docs/configure/file-image-upload/#images_upload_handler
         images_upload_handler: (blobInfo, success, failure) => {
+          console.log(blobInfo, 'blobInfoblobInfoblobInfoblobInfo')
+          console.log(blobInfo.blobUri(), 'blobInfoblobInfoblobUri')
+          console.log(blobInfo.blob(), 'blobInfoblobInfoblob11111')
+          console.log(blobInfo.name(), 'blobInfoblobInfoname')
+          console.log(blobInfo.filename(), 'blobInfoblobInfofilename')
+          this.test(blobInfo.name())
           const img = 'data:image/jpeg;base64,' + blobInfo.base64()
           success(img)
         }
@@ -73,6 +80,9 @@ export default {
     // 需要什么事件可以自己增加
     onClick (e) {
       this.$emit('onClick', e, tinymce)
+    },
+    test (name) {
+      this.$emit('test', name)
     },
     // 可以添加一些自己的自定义事件，如清空内容
     clear () {

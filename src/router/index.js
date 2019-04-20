@@ -9,7 +9,8 @@ import SubTable from '@/test/table/subTable'
 
 import EventBusTest from '@/test/eventBusTest'
 
-import TinyTest from '@/test/tinymce/tinyTest1'
+import TinyTest from '@/test/tinymce/tinyTest'
+import TinyShowImage from '@/test/tinymce/showImage'
 
 Vue.use(Router)
 
@@ -51,6 +52,11 @@ export default new Router({
           path: 'tinyTest',
           name: 'tinyTest',
           component: TinyTest
+        },
+        {
+          path: 'tinyShowImage',
+          name: 'tinyShowImage',
+          component: TinyShowImage
         }
       ]
     }
