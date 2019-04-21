@@ -12,6 +12,10 @@ import EventBusTest from '@/test/eventBusTest'
 import TinyTest from '@/test/tinymce/tinyTest'
 import TinyShowImage from '@/test/tinymce/showImage'
 
+import KeepAlive from '@/test/keepAlive'
+import KeepAlive1 from '@/test/keepAlive/keepAlive1'
+import KeepAlive2 from '@/test/keepAlive/keepAlive2'
+
 Vue.use(Router)
 
 export default new Router({
@@ -57,6 +61,28 @@ export default new Router({
           path: 'tinyShowImage',
           name: 'tinyShowImage',
           component: TinyShowImage
+        }, {
+          path: 'keepAlive',
+          name: 'keepAlive',
+          component: KeepAlive,
+          children: [
+            {
+              path: 'keepAlive1',
+              name: 'keepAlive1',
+              component: KeepAlive1,
+              meta: {
+                keepAlive: true // 需要被缓存
+              }
+            },
+            {
+              path: 'keepAlive2',
+              name: 'keepAlive2',
+              component: KeepAlive2,
+              meta: {
+                keepAlive: true // 需要被缓存
+              }
+            }
+          ]
         }
       ]
     }

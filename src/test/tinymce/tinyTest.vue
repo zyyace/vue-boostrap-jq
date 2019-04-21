@@ -9,7 +9,7 @@
       @test="test"
       ref="editor"></tinymce-editor>
     <button @click="clear">清空内容</button>
-    <button @click="disabled = true">禁用</button>
+    <button @click="disabled = !disabled">{{disabled ? '启用' : '禁用'}}</button>
   </div>
 </template>
 
